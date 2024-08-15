@@ -1,0 +1,6 @@
+[submodule "vedu-frontend"]
+	path = vedu-frontend
+	url = https://github.com/Ali-Rhayem/vedu-frontend.git
+[submodule "vedu-backend"]
+	path = vedu-backend
+	url = https://github.com/Ali-Rhayem/vedu-backend.git
