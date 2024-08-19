@@ -20,12 +20,31 @@ jobs:
         git submodule update --init --recursive --remote
         git submodule status
 
+    - name: Get submodule commit messages
+      id: get-submodule-commits
+      run: |
+        # Get the list of submodules
+        submodule_paths=$(git submodule --quiet foreach 'echo $sm_path')
+        
+        # Get the commit messages for each submodule
+        for path in $submodule_paths; do
+          cd $path
+          COMMIT_MSG=$(git log -1 --pretty=format:%s)
+          echo "$path: $COMMIT_MSG" >> ../submodule_commits.txt
+          cd ..
+        done
+        
+        # Export submodule commit messages as environment variables
+        cat submodule_commits.txt | while read line; do
+          echo "SUBMODULE_COMMIT_${line%%:*}=${line#*: }" >> $GITHUB_ENV
+        done
+
     - name: Commit and Push changes
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         git add .
         git status
-        git commit -m "Automatically updated submodules" || echo "No changes to commit"
-        git remote set-url origin https://${{secrets.PAT}}@github.com/Ali-Rhayem/VEDU.git
+        git commit -m "Updated submodules to: $(cat submodule_commits.txt)" || echo "No changes to commit"
+        git remote set-url origin https://${{ secrets.PAT }}@github.com/Ali-Rhayem/VEDU.git
         git push || echo "Failed to push"
