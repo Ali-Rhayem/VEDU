@@ -1,0 +1,2 @@
+vedu-backend: added .env to gitignore
+vedu-frontend: initialized react
