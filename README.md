@@ -5,7 +5,7 @@
 <!-- project philosophy -->
 <img src="./readme/title2.svg"/>
 
-> A web app for teaching and taking online classes, making it easier for people to get or give knowledge online.
+> A comprehensive virtual classroom platform designed to facilitate seamless online teaching and learning, empowering both instructors and students through advanced technology.
 >
 > VEDU aims to revolutionize the learning experience by integrating advanced AI technologies, creating an engaging, interactive, and efficient environment. Our philosophy focuses on accessibility, personalization, and collaboration, enhancing both teaching and learning through technology.
 
@@ -13,45 +13,53 @@
 
 #### Instructor
 
-- As an instructor, I want to use a live interactive whiteboard, so I can visually explain concepts to my students in real-time.
-- As an instructor, I want to conduct real-time polls and quizzes with instant results and analysis, so I can gauge student understanding and adjust my teaching accordingly.
-- As an instructor, I want to track student attendance, participation, and performance, so I can provide targeted support and interventions.
+- As an instructor, I want to use Google Meet with live video, audio, and screen sharing, so I can conduct interactive classes and present my materials effectively.
+- As an instructor, I want to engage with students through live chat within each class, so I can answer questions and facilitate discussions during the session.
+- As an instructor, I want to use a collaborative compiler where only I can edit unless I give permission to students, so I can control who contributes to coding tasks during live sessions.
+- As an instructor, I want to use a Chrome extension that summarizes chat discussions, so I can review key points and follow up on class interactions efficiently.
 
 #### Student
 
-- As a student, I want real-time AI-powered assistance during live sessions, so I can get instant answers to my questions and receive personalized feedback.
+- As a student, I want to participate in class via Google Meet with video, audio, and screen sharing, so I can fully engage in live sessions and discussions.
 
-- As a student, I want to participate in breakout rooms with AI moderation, so I can collaborate with peers on group discussions and projects.
+- As a student, I want to use live chat during the class to ask questions or share my thoughts without interrupting the flow of the session.
 
-- As a student, I want access to detailed session reports, so I can review my progress and areas for improvement.
+- As a student, I want to work with a collaborative compiler, but only edit code when the instructor gives permission, so I can contribute to coding tasks when appropriate.
+
+- As a student, I want to interact with an AI assistant during class to ask questions and receive instant responses, so I can get personalized help when I need it.
+
+- As a student , I want to use a Chrome extension that summarizes chats , so I can follow up on class interactions efficiently.
 
 <br><br>
 
 <!-- Tech stack -->
 <img src="./readme/title3.svg"/>
+<br><br>
 
-### Coffee Express is built using the following technologies:
+### VEDU is built using the following technologies:
 
-- This project uses the [Flutter app development framework](https://flutter.dev/). Flutter is a cross-platform hybrid app development platform which allows us to use a single codebase for apps on mobile, desktop, and the web.
-- For persistent storage (database), the app uses the [Hive](https://hivedb.dev/) package which allows the app to create a custom storage schema and save it to a local database.
-- To send local push notifications, the app uses the [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) package which supports Android, iOS, and macOS.
-  - 🚨 Currently, notifications aren't working on macOS. This is a known issue that we are working to resolve!
-- The app uses the font ["Work Sans"](https://fonts.google.com/specimen/Work+Sans) as its main font, and the design of the app adheres to the material design guidelines.
+- The frontend was built using **[React](https://react.dev)**. React is a front-end JavaScript library based on components, it is like creating building blocks and then stacking them on each other to build a website.
+- The backend was built using **[Laravel](https://laravel.com/docs/11.x/releases)** for handling backend logic and API operations, and **[Node.js](https://nodejs.org/en)** with **[Socket.IO](https://socket.io)** for real-time features like live sockets, the collaborative compiler, and chat functionality.
+- For the database, **[MySQL](https://www.mysql.com)** was chosen for its reliability, performance, and scalability. Its support for ACID transactions and optimized indexing makes it ideal for handling real-time functionalities efficiently.
+- For the frontend routing, **[React Router v6.21](https://reactrouter.com/en/6.21.3/start/overview)** was used, which made routing on the frontend easier and working with data better with its data API.
+
+- For real-time collaboration in compiler, and real time messaging ,the app uses **[Socket.IO](https://socket.io)**, a library that enables low-latency, bidirectional, and event-based communication between the client and server, allowing multiple users to chat and edit code collaboratively in real time.
 
 <br><br>
 
 <!-- UI UX -->
 <img src="./readme/title4.svg"/>
+<br><br>
 
-> We designed Coffee Express using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
+> We designed VEDU using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
 
 - Project Figma design [figma](https://www.figma.com/file/LsuOx5Wnh5YTGSEtrgvz4l/Purrfect-Pals?type=design&node-id=257%3A79&mode=design&t=adzbABt5hbb91ucZ-1)
 
 ### Mockups
 
-| Home screen                             | Menu Screen                           | Order Screen                          |
+| Register screen                             | Chatting Screen                           | Compiler Screen                          |
 | --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Register](./readme/demo/Register.png) | ![Chatting_Page](./readme/demo/Chatting_Page.png) | ![Compiler](./readme/demo/Compiler.png) |
 
 <br><br>
 
@@ -60,7 +68,7 @@
 
 ### Architecting Data Excellence: Innovative Database Design Strategies:
 
-- Insert ER Diagram here
+<img src="./readme/demo/Database.png">
 
 <br><br>
 
@@ -69,11 +77,21 @@
 
 ### User Screens (Mobile)
 
-| Login screen                              | Register screen                         | Landing screen                          | Loading screen                          |
-| ----------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- |
-| ![Landing](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) |
-| Home screen                               | Menu Screen                             | Order Screen                            | Checkout Screen                         |
-| ![Landing](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) |
+| Login screen                                    | Register screen                               |
+| ----------------------------------------------- | --------------------------------------------- |
+| ![Login](./readme/demo/Login.png)               | ![Register](./readme/demo/Register.png)       | 
+| Home Page                                       | Class Page                                    |
+| ![Home](./readme/demo/Home.png)                 | ![Class](./readme/demo/Class.png)             | 
+| Landing Page                                    | Assignments Page                              |
+| ![Landing](./readme/demo/Landing.gif)           | ![Assignments](./readme/demo/Assignments.png) |
+| Submissions Page                                | Chats Page                                    |
+| ![Submissions](./readme/demo/Submissions.png)   | ![Chats](./readme/demo/Chats.png)             |
+| Chat Page                                       | Class People Page                             |
+| ![Chat](./readme/demo/Chatting_Page.png)        | ![Classpeople](./readme/demo/Class_People.png)|
+| Meeting Setup Page                              | Video Call Page                               |
+| ![Setup Page](./readme/demo/Meeting_Setup_Page.png)| ![Videocall](./readme/demo/Video_call.gif) |
+| compiler                                        | Real Time coding                              |
+| ![Compiler](./readme/demo/Compiler.png)         | ![Videocall](./readme/demo/Live_coding.gif)   |
 
 ### Admin Screens (Web)
 
