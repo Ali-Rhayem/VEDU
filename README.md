@@ -21,14 +21,17 @@
 #### Student
 
 - As a student, I want to participate in class via Google Meet with video, audio, and screen sharing, so I can fully engage in live sessions and discussions.
-
 - As a student, I want to use live chat during the class to ask questions or share my thoughts without interrupting the flow of the session.
-
 - As a student, I want to work with a collaborative compiler, but only edit code when the instructor gives permission, so I can contribute to coding tasks when appropriate.
-
 - As a student, I want to interact with an AI assistant during class to ask questions and receive instant responses, so I can get personalized help when I need it.
 
 - As a student , I want to use a Chrome extension that summarizes chats , so I can follow up on class interactions efficiently.
+
+#### Admin
+
+- As an admin, I want to View website stats so that i can monitor platform performance.
+- As an admin, I want to View users with details like profile picture, name, email, and role for user management.
+- As an admin, I want to View classes with name, owner, student, and instructor counts for class management.
 
 <br><br>
 
@@ -45,6 +48,8 @@
 
 - For real-time collaboration in compiler, and real time messaging ,the app uses **[Socket.IO](https://socket.io)**, a library that enables low-latency, bidirectional, and event-based communication between the client and server, allowing multiple users to chat and edit code collaboratively in real time.
 
+- The app uses **[Electron](https://www.electronjs.org)** to run the admin panel on different operating systems. It uses standard web technologies like HTML, CSS, and JavaScript.
+
 <br><br>
 
 <!-- UI UX -->
@@ -57,8 +62,8 @@
 
 ### Mockups
 
-| Register screen                             | Chatting Screen                           | Compiler Screen                          |
-| --------------------------------------- | ------------------------------------- | ------------------------------------- |
+| Register screen                         | Chatting Screen                                   | Compiler Screen                         |
+| --------------------------------------- | ------------------------------------------------- | --------------------------------------- |
 | ![Register](./readme/demo/Register.png) | ![Chatting_Page](./readme/demo/Chatting_Page.png) | ![Compiler](./readme/demo/Compiler.png) |
 
 <br><br>
@@ -75,42 +80,36 @@
 <!-- Implementation -->
 <img src="./readme/title6.svg"/>
 
-### User Screens (Mobile)
+### User Pages (Web)
 
-| Login screen                                    | Register screen                               |
-| ----------------------------------------------- | --------------------------------------------- |
-| ![Login](./readme/demo/Login.png)               | ![Register](./readme/demo/Register.png)       | 
-| Home Page                                       | Class Page                                    |
-| ![Home](./readme/demo/Home.png)                 | ![Class](./readme/demo/Class.png)             | 
-| Landing Page                                    | Assignments Page                              |
-| ![Landing](./readme/demo/Landing.gif)           | ![Assignments](./readme/demo/Assignments.png) |
-| Submissions Page                                | Chats Page                                    |
-| ![Submissions](./readme/demo/Submissions.png)   | ![Chats](./readme/demo/Chats.png)             |
-| Chat Page                                       | Class People Page                             |
-| ![Chat](./readme/demo/Chatting_Page.png)        | ![Classpeople](./readme/demo/Class_People.png)|
-| Meeting Setup Page                              | Video Call Page                               |
-| ![Setup Page](./readme/demo/Meeting_Setup_Page.png)| ![Videocall](./readme/demo/Video_call.gif) |
-| compiler                                        | Real Time coding                              |
-| ![Compiler](./readme/demo/Compiler.png)         | ![Videocall](./readme/demo/Live_coding.gif)   |
+| Login Page                                           | Register Page                                  |
+| ---------------------------------------------------- | ---------------------------------------------- |
+| ![Login](./readme/demo/Login.png)                    | ![Register](./readme/demo/Register.png)        |
+| Home Page                                            | Class Page                                     |
+| ![Home](./readme/demo/Home.png)                      | ![Class](./readme/demo/Class.png)              |
+| Landing Page                                         | Assignments Page                               |
+| ![Landing](./readme/demo/Landing.gif)                | ![Assignments](./readme/demo/Assignments.png)  |
+| Submissions Page                                     | Chats Page                                     |
+| ![Submissions](./readme/demo/Submissions.png)        | ![Chats](./readme/demo/Chats.png)              |
+| Chat Page                                            | Class People Page                              |
+| ![Chat](./readme/demo/Chatting_Page.png)             | ![Classpeople](./readme/demo/Class_People.png) |
+| Meeting Setup Page                                   | Video Call Page                                |
+| ![Setup Page](./readme/demo/Meeting_Setup_Page.png)  | ![Videocall](./readme/demo/Video_call.gif)     |
+| compiler                                             | Real Time coding                               |
+| ![Compiler](./readme/demo/Compiler.png)              | ![Videocall](./readme/demo/Live_coding.gif)    |
+| Live Meet Chat                                       | Meeting chat with ai                           |
+| ![Meeting_Chat](./readme/demo/Live_meeting_chat.gif) | ![Ai Chat](./readme/demo/Chat_with_ai.gif)     |
 
-### Admin Screens (Web)
+### Admin Panel (Desktop)
 
-| Login screen                            | Register screen                       | Landing screen                        |
-| --------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
-| Home screen                             | Menu Screen                           | Order Screen                          |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
-
-<br><br>
-
-<!-- Prompt Engineering -->
-<img src="./readme/title7.svg"/>
-
-### Mastering AI Interaction: Unveiling the Power of Prompt Engineering:
-
-- This project uses advanced prompt engineering techniques to optimize the interaction with natural language processing models. By skillfully crafting input instructions, we tailor the behavior of the models to achieve precise and efficient language understanding and generation for various tasks and preferences.
+| Dashboard screen                          | users                                    |
+| ----------------------------------------- | ---------------------------------------- |
+| ![Dashboard](./readme/demo/Dashboard.png) | ![users](./readme/demo/Manage_users.png) |
+| Courses                                   |
+| ![classes](./readme/demo/Courses.png)     |
 
 <br><br>
+
 
 <!-- AWS Deployment -->
 <img src="./readme/title8.svg"/>
@@ -126,8 +125,12 @@
 
 ### Precision in Development: Harnessing the Power of Unit Testing:
 
-- This project employs rigorous unit testing methodologies to ensure the reliability and accuracy of code components. By systematically evaluating individual units of the software, we guarantee a robust foundation, identifying and addressing potential issues early in the development process.
+- In this project, unit testing was implemented using Laravel's built-in testing tools along with PHPUnit. PHPUnit was installed via `composer require --dev phpunit/phpunit` to provide a robust testing framework. Model factories were created to generate consistent test data, ensuring comprehensive coverage across various scenarios.
 
+- The testing focused on key areas such as controller actions, API endpoints, file uploads/downloads, and middleware. Assertions like `assertJson`, `assertTrue`, and `assertStatus` were used to validate responses, while database checks were done with `assertDatabaseHas` to ensure data integrity.
+
+##### Here is the result of the tests
+<img src="./readme/demo/Unit_testing.png">
 <br><br>
 
 <!-- How to run -->
