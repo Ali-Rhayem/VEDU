@@ -4,3 +4,6 @@
 [submodule "vedu-backend"]
 	path = vedu-backend
 	url = https://github.com/Ali-Rhayem/vedu-backend.git
+[submodule "vedu-admin"]
+	path = vedu-admin
+	url = https://github.com/Ali-Rhayem/vedu-admin.git
