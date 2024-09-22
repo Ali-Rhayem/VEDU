@@ -115,6 +115,7 @@
 
 <!-- Prompt Engineering -->
 <img src="./readme/title7.svg"/>
+
 ### Mastering AI Interaction: Unveiling the Power of Prompt Engineering:
 
 - Chat Summaries: The AI model is prompted to process long chat logs and extract the most important points, providing users with concise summaries. By structuring the prompts to guide the AI on what to focus on, the model can effectively summarize conversations while filtering out less relevant information.
