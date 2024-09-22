@@ -131,12 +131,6 @@
 
 This project demonstrates the deployment of both **Node.js** and **Laravel** backends on AWS EC2, leveraging **Nginx** as a reverse proxy to handle traffic. By combining these technologies, the deployment is optimized for scalability, reliability, and performance, ensuring seamless integration and responsiveness.
 
-### **Technologies Used**
-
-- **AWS EC2**: For hosting the backend servers
-- **Node.js**: Backend server for real-time AI applications
-- **Laravel (PHP)**: Backend server for RESTful API and handling requests
-- **Nginx**: Reverse proxy server to manage traffic between Node.js and Laravel
 
 ### **Deployment Steps**
 
