@@ -14,18 +14,14 @@
 #### Instructor
 
 - As an instructor, I want to use Meeting with live video, audio, and screen sharing, so I can conduct interactive classes and present my materials effectively.
-- As an instructor, I want to engage with students through live chat within each class, so I can answer questions and facilitate discussions during the session.
 - As an instructor, I want to use a collaborative compiler where only I can edit unless I give permission to students, so I can control who contributes to coding tasks during live sessions.
 - As an instructor, I want to use a Chrome extension that summarizes chat discussions, so I can review key points and follow up on class interactions efficiently.
 
 #### Student
 
 - As a student, I want to participate in class via Meeting with video, audio, and screen sharing, so I can fully engage in live sessions and discussions.
-- As a student, I want to use live chat during the class to ask questions or share my thoughts without interrupting the flow of the session.
 - As a student, I want to work with a collaborative compiler, but only edit code when the instructor gives permission, so I can contribute to coding tasks when appropriate.
 - As a student, I want to interact with an AI assistant during class to ask questions and receive instant responses, so I can get personalized help when I need it.
-
-- As a student , I want to use a Chrome extension that summarizes chats , so I can follow up on class interactions efficiently.
 
 #### Admin
 
@@ -62,12 +58,11 @@
 
 ### Mockups
 
-| Register screen | Chatting Screen |
-| ![Register](./readme/demo/Register.png) | ![Chatting_Page](./readme/demo/Chatting_Page.png) |
+| Chatting Screen | Compiler Screen |
 | --------------------------------------- | ------------------------------------------------- |
-| Compiler Screen |
-| --------------------------------------- |
-| ![Compiler](./readme/demo/Compiler.png) |
+| ![Chatting_Page](./readme/demo/Chatting_Page.png) |![Compiler](./readme/demo/Compiler.png) |
+
+
 
 <br><br>
 
