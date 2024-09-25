@@ -117,6 +117,10 @@
 
 - AI Chat in Meetings: During meetings, users can interact with an AI by asking questions or seeking assistance. Through prompt engineering, we tailor the instructions given to the AI, helping it generate appropriate, real-time responses that fit the context of the discussion. This enhances the overall meeting experience, making the AI a valuable assistant.
 
+| Prompt_1 Screen                           | Prompt_2 Screen                          |
+| ----------------------------------------- | ---------------------------------------- |
+| ![Prompt1](./readme/demo/Prompt_1.png)    | ![Prompt2](./readme/demo/Prompt_2.png) |
+
 <br><br>
 
 <!-- AWS Deployment -->
