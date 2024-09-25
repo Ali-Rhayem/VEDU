@@ -237,6 +237,8 @@ cd /var/www/node-backend
 pm2 start index.js --name node-backend
 ```
 
+<img src="./readme/demo/AWS.gif">
+
 <br><br>
 
 <!-- Unit Testing -->
